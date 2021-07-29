@@ -174,6 +174,9 @@ export default {
       return sprite;
     },
   },
+  mounted() {
+    console.log("hh");
+  },
 };
 </script>
 
