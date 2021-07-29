@@ -154,32 +154,26 @@ export default {
   },
   methods: {
     expandNavMenu() {
-      
       this.$store.dispatch("expandNav");
     },
     switchLightMode() {
       this.$store.dispatch("checkDisplayMode");
     },
     kaka(val) {
-      
       this[val] = true;
     },
     papa(val) {
-      
       this[val] = false;
     },
- 
   },
   computed: {
     getDisplayState() {
-     
       return this.$store.getters.getDisplayState;
     },
     getSprite() {
       return sprite;
     },
   },
-
 };
 </script>
 
