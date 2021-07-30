@@ -1,14 +1,17 @@
 <template>
   <section class="main-section">
     <header>
-      <base-link
-        :class="{ active: btn.sort === 'the-colors' }"
-        @click="colorsGradientBtn($event, btn.sort)"
-        :mode="getDisplayState ? 'standard-black' : 'standard-white'"
-        :content="btn.content"
-        :key="btn"
-        v-for="btn in btns"
-      ></base-link>
+      <h1>Color palette & Gradient generator</h1>
+      <div class="header__btns">
+        <base-link
+          :class="{ active: btn.sort === 'the-colors' }"
+          @click="colorsGradientBtn($event, btn.sort)"
+          :mode="getDisplayState ? 'standard-black' : 'standard-white'"
+          :content="btn.content"
+          :key="btn"
+          v-for="btn in btns"
+        ></base-link>
+      </div>
     </header>
     <div class="main-content">
       <transition name="fade">
@@ -38,8 +41,6 @@ export default {
   },
   methods: {
     colorsGradientBtn(e, val) {
-      
-
       Array.from(document.querySelectorAll(".btn-style")).forEach((e) =>
         e.classList.remove("active")
       );
@@ -66,14 +67,29 @@ export default {
 header {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    text-align: center;
+    @media only screen and (max-width: 60.5rem) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: 42rem) {
+      font-size: 3rem;
+    }
+  }
 }
-header {
-  margin-bottom: 5rem;
+.header__btns {
   & > * {
     &:not(:last-of-type) {
       margin-right: 2rem;
     }
   }
+}
+header {
+  margin-bottom: 5rem;
 }
 .main-content {
   width: 80%;
