@@ -43,10 +43,13 @@
         </base-link>
       </div>
     </div>
-    <span @click="scrollUp" class="up">Top</span>
+    <div @click="scrollUp" class="up">
+      <svg><use :href="getSprite"></use></svg>
+    </div>
   </div>
 </template>
 <script>
+import sprite from '../../../public/sprite.svg' 
 export default {
   data() {
     return { colorsCopy2: [], active: { state: false, color: "" } };
@@ -61,6 +64,9 @@ export default {
     getActiveness() {
       return this.active;
     },
+    getSprite(){
+      return `${sprite}#icon-arrow-up`
+    }
   },
 
   methods: {
@@ -248,6 +254,14 @@ export default {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  & > * {
+    fill: white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   @media only screen and (max-width: 42rem) {
     height: 4rem;
     width: 4rem;

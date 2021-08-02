@@ -1,26 +1,28 @@
 <template>
   <the-content>
     <li>
-      <h2>What is Uiflare?</h2>
+      <h2>What is Uichroma?</h2>
       <p>
-        Uiflare is built for designers and everbody who obsessed with colors, so
-        focus on your creativity and your core business and let us make the
-        color palette for you. Just pick color you like and we will do the rest.
-        So with uiflare, you can pick a color from our variety, or pick two
-        colors, merge them together and get a fancy gradient that works for you.
+        Uichroma is built for web / mobile developers, designers and everbody
+        who is obsessed with colors. Many color tools out there, lack
+        performance, they are slow, pages reload all the timea dn are
+        monofunctional. This is why uichroma comes into play, it is fast, no
+        page reload and multifunctional. With uichroma you can pick colors that
+        fit you better for your next project, get tints shades and also
+        complementary colors set, in addition a nice gradient generator waits
+        for you, yo can create fancy gradients linear or radial ones, all in one
+        resource.
       </p>
     </li>
     <li>
-      <h2>Who created Uiflare?</h2>
+      <h2>Who created Uichroma?</h2>
       <p>
-        Uiflare was created by Hamza Sehouli. sorry who? Hamza Sehouli is a
-        fullstack web developer, enjoys creating things from scratch. He droped
-        out of college to persue his passion for programming and coding in
-        general. My skills are: html, css, lovely javascript ES6, node.js and
-        vue3.js. If you have any question, comment or you need help, feel free
-        to ask me, you can reach me by sending me an email:
-        sehoulihamza@yahoo.com or browse my website where you can use the
-        contact form:
+        Uichroma developed by Hamza Sehouli, a fullstack web developer, enjoys
+        creating things from scratch and has passion for web design. I speak
+        these languages: html, css, lovely javascript ES6, node.js and vue.js.
+        If you have any question, comment or you need help, feel free to ask me,
+        you can reach me out by sending me an email: sehoulihamza@yahoo.com or
+        browse my website where you can use the contact form:
         <base-link
           :mode="getDisplayState ? 'standard-black' : 'standard-white'"
           typ="lin"
