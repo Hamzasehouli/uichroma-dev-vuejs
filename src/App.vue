@@ -119,17 +119,7 @@
         </transition>
       </router-view>
     </div>
-    <footer>
-      <p>
-        designed and created by
-        <base-link
-          :mode="getDisplayState ? 'standard-black' : 'standard-white'"
-          content="Hamza Sehouli"
-          typ="lin"
-          path="http://hamzasehouli.ma"
-        ></base-link>
-      </p>
-    </footer>
+    <the-footer></the-footer>
   </div>
 </template>
 
@@ -138,11 +128,13 @@ import sprite from "../public/sprite.svg";
 import BaseLink from "./components/base/BaseLink.vue";
 import TheHeader from "./components/TheHeader.vue";
 import EditColor from "./views/EditColor.vue";
+import TheFooter from "./components/home-cmp/TheFooter.vue";
 export default {
   components: {
     TheHeader,
     BaseLink,
     EditColor,
+    TheFooter,
   },
   data() {
     return {
@@ -173,9 +165,6 @@ export default {
     getSprite() {
       return sprite;
     },
-  },
-  mounted() {
-    console.log("hh");
   },
 };
 </script>
@@ -288,7 +277,7 @@ svg {
     top: -0.9rem;
   }
   &__input {
-    display: hidden;
+    display: none;
     visibility: hidden;
   }
   &__label {
@@ -388,14 +377,7 @@ svg {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 }
-footer {
-  padding: 2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
-}
+
 h2 {
   margin-bottom: 1.5rem;
 }

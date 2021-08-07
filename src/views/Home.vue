@@ -19,16 +19,19 @@
           <component :is="cmp" />
         </keep-alive>
       </transition>
+      <best-tools></best-tools>
     </div>
   </section>
 </template>
 <script>
 import TheColors from "../components/home-cmp/TheColors.vue";
 import TheGradient from "../components/home-cmp/TheGradient.vue";
+import BestTools from "../components/BestTools.vue";
 export default {
   components: {
     TheColors,
     TheGradient,
+    BestTools,
   },
   data() {
     return {

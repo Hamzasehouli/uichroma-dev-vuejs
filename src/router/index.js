@@ -3,6 +3,10 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
+    redirect: "/home",
+  },
+  {
+    path: "/home",
     name: "Home",
     component: () => import("../views/Home.vue"),
   },
@@ -32,6 +36,18 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/TheInfo.vue"),
   },
   {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("../views/TheBlog.vue"),
+  },
+  {
+    path: "/article/:topic",
+    name: "article",
+    component: () => import("../components/ArticleDetail.vue"),
+    props: true,
+  },
+
+  {
     path: "/:notFound(.*)",
     component: () => import("../components/NotFound.vue"),
   },
@@ -44,7 +60,7 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition;
     } else {
-      return { x: 0, y: 0 };
+      return { left: 0, top: 0 };
     }
   },
 });
