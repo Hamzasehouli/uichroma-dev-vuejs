@@ -1,7 +1,7 @@
 <template>
   <section class="main-section">
     <header>
-      <h1>Color palette & Gradient generator</h1>
+      <!-- <h1>Color palette & Gradient generator</h1> -->
       <div class="header__btns">
         <base-link
           :class="{ active: btn.sort === 'the-colors' }"

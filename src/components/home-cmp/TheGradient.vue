@@ -67,7 +67,6 @@ export default {
   },
   methods: {
     state(val) {
-     
       this.radius = val;
     },
     getSliderRange(e) {
@@ -75,7 +74,6 @@ export default {
     },
     async copy() {
       try {
-        
         const copyToClipboard = function (text) {
           const elem = document.createElement("textarea");
           elem.value = text;

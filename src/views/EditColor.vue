@@ -12,7 +12,11 @@
         :mode="getDisplayState ? 'standard-black' : 'standard-white'"
         path="/"
       ></base-link>
-      <img alt="uichroma black logo" v-if="getDisplayState" src="../../public/logo-black.png" />
+      <img
+        alt="uichroma black logo"
+        v-if="getDisplayState"
+        src="../../public/logo-black.png"
+      />
       <img alt="uichroma white logo" v-else src="../../public/logo-white.png" />
     </div>
     <div

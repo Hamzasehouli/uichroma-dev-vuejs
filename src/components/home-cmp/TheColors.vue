@@ -49,7 +49,7 @@
   </div>
 </template>
 <script>
-import sprite from '../../../public/sprite.svg' 
+import sprite from "../../../public/sprite.svg";
 export default {
   data() {
     return { colorsCopy2: [], active: { state: false, color: "" } };
@@ -64,9 +64,9 @@ export default {
     getActiveness() {
       return this.active;
     },
-    getSprite(){
-      return `${sprite}#icon-arrow-up`
-    }
+    getSprite() {
+      return `${sprite}#icon-arrow-up`;
+    },
   },
 
   methods: {

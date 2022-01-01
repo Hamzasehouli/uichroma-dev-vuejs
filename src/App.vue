@@ -188,6 +188,8 @@ body {
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility;
+  max-width: 1420px;
+  margin: 0 auto;
 }
 
 .container {

@@ -135,6 +135,7 @@ footer {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
   margin-top: 7rem;
+
   p {
     padding: 2rem;
     display: flex;
